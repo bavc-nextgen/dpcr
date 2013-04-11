@@ -1,6 +1,8 @@
 body{
-	background: #000;
-	color: #fff;
+	height:100%;
+	width:100%;
+	/*color: #fff;*/
+	color:gray;
 	font-family: Arial;
 }
 

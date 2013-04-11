@@ -11,10 +11,11 @@ var initPopcorn = function() {
 		$('#currentTime').val(this.currentTime());
 	});   
 
-	pop.cue(9.06, myFunc);
+	pop.cue(2.06, function(){
+/*
+al the code was crap, re thiknking tonight after some coffee
 
-	pop.cue(13.06, function() {
-		console.log("yeah");
+*/
 	});
 
 	pop.footnote({
@@ -25,6 +26,4 @@ var initPopcorn = function() {
 	});
 };
 
-var myFunc = function() {
-	console.log("myfunc");
-};
+
