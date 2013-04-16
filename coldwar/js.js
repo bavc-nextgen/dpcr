@@ -11,19 +11,18 @@ var initPopcorn = function() {
 		$('#currentTime').val(this.currentTime());
 	});   
 
-	pop.cue(2.06, function(){
-/*
-al the code was crap, re thiknking tonight after some coffee
-
-*/
-	});
-
-	pop.footnote({
-		start: 0,
-		end: 20,
-		target: "footnote",
-		text: "<p><h3><b>New Clear Vision</b></h3><br/>Directed by Henry Zaballos, 2009<br/>A short experimental film that uses found footage to explore nostalgic images to explore images from our collective mental landscapes.</p>"
-	});
+	pop.cue(2.06, changeBg);
+	pop.cue(4.0, changeBgTwo);
 };
 
+var changeBg = function() {
+	$('#bg').fadeTo('slow', 0.3, function() {
+		$(this).attr('src', 'img/img1.jpg');
+	}).fadeTo('slow', 1);
+};
 
+var changeBgTwo = function() {
+	$('#bg').fadeTo('slow', 0.3, function() {
+		$(this).attr('src', 'img/img2.jpg');
+	}).fadeTo('slow', 1);
+};
