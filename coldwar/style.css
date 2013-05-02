@@ -37,14 +37,27 @@ a:hover {
 	position: relative;
 	background: rgba(51,51,51,0.6);
 	width: 800px;
+	top: 0px;
+	border-radius: .5em;
+	-webkit-border-radius: .5em;
+	-moz-border-radius: .5em;
+}
+
+#encv{
+	position: relative;
+	background: none;
+	width: 800px;
 	top: 20px;
 	border-radius: .5em;
 	-webkit-border-radius: .5em;
 	-moz-border-radius: .5em;
 }
 
+#encvtile{
+	font-size: 50px;
+}
 #video{
-	padding-top:40px;
+	padding-top: 20px;
 }
 
 #vid-info{
@@ -76,7 +89,7 @@ a:hover {
 	padding-bottom: 20px;
 }
 
-#e-info, #encv, #e1{
+#e-info, #encv, .e{
 	display:none;
 }
 
