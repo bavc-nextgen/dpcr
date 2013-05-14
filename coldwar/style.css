@@ -33,6 +33,17 @@ a:hover {
   min-height: 100%;
 }
 
+#videobg{
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: fixed; 
+	top: 0; 
+	left: 0; 
+
+  /* Preserve aspet ratio */
+}
+
 .container, .e{
 	position: relative;
 	background: rgba(51,51,51,0.6);
@@ -55,6 +66,10 @@ a:hover {
 
 #encvtile{
 	font-size: 50px;
+}
+
+#end{
+	display: none;
 }
 #video{
 	padding-top: 20px;

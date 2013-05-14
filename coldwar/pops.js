@@ -37,11 +37,27 @@ var initPopcorn = function() {
 			pop.cue(31.0, bge);
 			pop.cue(35.0, bgf);
 			pop.cue(37.0, seb);
+			pop.cue(39.0, seba);
 			pop.cue(39.5, bgg);
 			pop.cue(42.5, sec);
-			pop.cue(47.5,, sed);
-			pop.cue(47.5,, bgh);
-			pop.cue(47.5,, see);
+			pop.cue(47.5, sed);
+			pop.cue(47.5, bgh);
+			pop.cue(60.5, see);
+			pop.cue(60.5, bgk);
+			pop.cue(79.0, bgi);
+			pop.cue(79.4, sef);
+			pop.cue(90.0, seg);
+			pop.cue(90.0, bgj);
+			pop.cue(99.0, seh);
+			pop.cue(99.0, bgl);
+			pop.cue(113.5, bgb);
+			pop.cue(115.8, bgm);
+			pop.cue(120.0, bge);
+			pop.cue(121.0, bgb);
+			pop.cue(122.0, showVideoBg);
+			pop.cue(122.1, playVideoBg);
+			pop.cue(150.0, hideVideoBg);
+			pop.cue(162.0, hideAll);
 			// /pop.cue(52.5, sed);
 };
 
@@ -49,6 +65,30 @@ var initPopcorn = function() {
 ////////////////////////////////////
 // jquery functions for each event//
 ////////////////////////////////////
+
+
+// video backgorund
+var hideAll = function(){
+	$('.e').hide('fast');
+	$('.container').hide('fast');
+	$('#end').show('fast');
+};
+var showVideoBg = function(){ // rain
+	$('#videobg').fadeTo('slow', 0.3, function() { 
+		$(this).show("slow");
+	}).fadeTo('slow', 1);
+};
+
+var hideVideoBg = function(){ // rain
+	$('#videobg').fadeTo('slow', 0.3, function() { 
+		$(this).hide("slow");
+	}).fadeTo('slow', 1);
+};
+
+var playVideoBg = function(){ 
+	document.getElementById("videobg").play();
+};
+
 
 // change of backgrounds
 
@@ -99,6 +139,41 @@ var bgh = function() { //black screen while the title shows
 		$(this).attr('src', 'img/img16.jpg');
 	}).fadeTo('slow', 1);
 };
+
+var bgi = function() { //black screen while the title shows
+	$('#bg').fadeTo('slow', 0.3, function() {
+		$(this).attr('src', 'img/img18.jpg');
+	}).fadeTo('slow', 1);
+};
+
+var bgj = function() { //black screen while the title shows
+	$('#bg').fadeTo('slow', 0.3, function() {
+		$(this).attr('src', 'img/img19.jpg');
+	}).fadeTo('slow', 1);
+};
+
+var bgk = function() { //black screen while the title shows
+	$('#bg').fadeTo('slow', 0.3, function() {
+		$(this).attr('src', 'img/img14.jpg');
+	}).fadeTo('slow', 1);
+};
+
+var bgl = function() { //black screen while the title shows
+	$('#bg').fadeTo('slow', 0.3, function() {
+		$(this).attr('src', 'img/img13.jpg');
+	}).fadeTo('slow', 1);
+};
+
+var bgm = function() { //black screen while the title shows
+		$('#bg').attr('src', 'img/img6.jpg');
+};
+
+var bgn = function() { //black screen while the title shows
+	$('#bg').fadeTo('slow', 0.3, function() {
+		$(this).attr('src', 'img/img12.jpg');
+	}).fadeTo('slow', 1);
+};
+
 // text changes
 var ncv = function(){
 	$("#encvtile").html("NEW");
@@ -132,6 +207,10 @@ var seb = function(){
 	$("#eb").show("slow");
 };
 
+var seba = function(){
+	$("#eba").show("slow");
+};
+
 var sec = function(){
 	$("#ec").show("slow");
 };
@@ -144,19 +223,18 @@ var see = function(){
 	$("#ee").show("slow");
 };
 
-/*
 var sef = function(){
-	$("ef").show("slow");
+	$("#ef").show("slow");
 };
 
 var seg = function(){
-	$("eg").show("slow");
+	$("#eg").show("slow");
 };
 
 var seh = function(){
-	$("eh").show("slow");
+	$("#eh").show("slow");
 };
-
+/*
 var sei = function(){
 	$("ei").show("slow");
 };
