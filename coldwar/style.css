@@ -33,6 +33,10 @@ a:hover {
   min-height: 100%;
 }
 
+#pops, #backgrounds{
+	display: ;
+}
+
 #videobg{
 	display: none;
 	width: 100%;
@@ -43,7 +47,9 @@ a:hover {
 
   /* Preserve aspet ratio */
 }
-
+.container{
+	display: none;
+}
 .container, .e{
 	position: relative;
 	background: rgba(51,51,51,0.6);
@@ -68,11 +74,28 @@ a:hover {
 	font-size: 50px;
 }
 
+#playPause{
+	position: relative;
+}
+
 #end{
 	display: none;
+	position:absolute;
+	text-align: center;
+	position: relative;
+	background: none;
+	width: 800px;
+	top: 20px;
+	border-radius: .5em;
+	-webkit-border-radius: .5em;
+	-moz-border-radius: .5em;
 }
 #video{
 	padding-top: 20px;
+	border-radius: .5em;
+	-webkit-border-radius: .5em;
+	-moz-border-radius: .5em;
+}
 }
 
 #vid-info{
@@ -84,6 +107,9 @@ a:hover {
 	border-radius: .2em;
 	-webkit-border-radius: .2em;
 	-moz-border-radius: .2em;
+}
+#info{
+	opacity: 0;
 }
 
 .etile{
@@ -108,6 +134,34 @@ a:hover {
 	display:none;
 }
 
+#canvas{
+	float:left;
+	margin-right:15px;
+	margin-bottom:50px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	-khtml-border-radius: 10px;
+}
+#endLinks, .twitter-share-button{
+	text-transform: uppercase;
+	font-weight:bold;
+	text-align: center;
+	font-size: 24px;
+}
 
+#playPause a {
+	color:#222;
+}
+#playPause a:visited {
+	color:#222;
+}
+#playPause a:hover {
+	color:red;
+}
 
+#startPops{
+	top:200px;
+	position: relative;
+}
 

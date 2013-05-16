@@ -10,10 +10,15 @@ $(document).ready(function(){
 	initPopcorn();
 });
 
+
 // the popcorn script, pops all the fuctions.
 
 var initPopcorn = function() {
-
+	$("#startPops").click(function() {
+		$('.container').slideDown('slow');
+		$('#startPops').fadeOut('slow');
+		$('#video').get(0).play();
+	});
 		// telling where the video is
 			var pop = Popcorn( "#video" );
 
@@ -57,6 +62,7 @@ var initPopcorn = function() {
 			pop.cue(122.0, showVideoBg);
 			pop.cue(122.1, playVideoBg);
 			pop.cue(150.0, hideVideoBg);
+			pop.cue(161.5, showEnd);
 			pop.cue(162.0, hideAll);
 			// /pop.cue(52.5, sed);
 };
@@ -71,8 +77,13 @@ var initPopcorn = function() {
 var hideAll = function(){
 	$('.e').hide('fast');
 	$('.container').hide('fast');
-	$('#end').show('fast');
+	$('#end').fadeIn(2000);
 };
+
+var showEnd = function(){
+	
+};
+
 var showVideoBg = function(){ // rain
 	$('#videobg').fadeTo('slow', 0.3, function() { 
 		$(this).show("slow");
@@ -80,9 +91,9 @@ var showVideoBg = function(){ // rain
 };
 
 var hideVideoBg = function(){ // rain
-	$('#videobg').fadeTo('slow', 0.3, function() { 
-		$(this).hide("slow");
-	}).fadeTo('slow', 1);
+	$('#videobg').fadeTo('fast', 0.3, function() { 
+		$(this).fadeOut("fast");
+	}).fadeTo('fast', 1);
 };
 
 var playVideoBg = function(){ 

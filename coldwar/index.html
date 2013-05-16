@@ -8,24 +8,46 @@
        <link rel="stylesheet" type="text/css" href="style.css" />
        <link rel="stylesheet" type="text/css" href="anim.css" />
      </head>
-    <body class="blowUp">
+<body class="blowUp">
+
+<div id="backgrounds">
 <img src="" id="bg" alt="">
-      <video id="videobg" muted="true">
-        <source src="vbg.mp4">
-      </video>
+<video id="videobg" muted="true">
+  <source src="vbg.mp4">
+</video>
+</div>
+
+
+
 <!--<canvas id-"animBg"></canvas>-->
-<div align="center">
+<div id="pops" align="center">
+
+
 
   <div class="" id="encv">
     <p id="encvtile"> </p>
   </div>
 
+
+
   <div class="container">
-      <video height="500" id="video" controls="" autoplay="">
+      <video height="500" id="video" >
         <source src="v.mp4">
       </video>
-      <div id="footnote"></div>
-      <div id="info">current time: <input type="text" id="currentTime" /></div>
+      <div id="playPause">
+      <a id="" href="#" onclick="playPause()" style="text-align:left;">play/pause</a> 
+      <script>
+      var video = document.getElementById("video"); 
+      function playPause()
+      {
+        if (video.paused)
+          video.play();
+        else
+          video.pause();
+      } 
+      </script>
+      </div>
+      <div id="info" style="display:none;">current time: <input type="text" id="currentTime" /></div>
   </div>
 
 <!--
@@ -33,7 +55,7 @@
 \\\\\\EVENTs AFTER THIS\\\\\
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\
 -->
-
+<!--
   <div class="e" id="en">
     <h3 class="etile"></h3>
     <p id="edescription"><br>
@@ -81,7 +103,7 @@
       <br><br><a href="">read more..</a>
   </p>
   </div>
-
+-->
   <div class="e" id="eh">
     <h3 class="etile">US Military</h3>
     <p id="edescription"><br>
@@ -164,8 +186,6 @@
   </p>
   </div>
 
-  <div>
-</div>
 
 <!--
 
@@ -189,13 +209,26 @@ Previous Project Next Project
   </div>
 
 -->
-<br><br><br>
+</div>
+<div align="center">
+    <div id="end">
+      <script type="text/javascript">
+// Popup window code
+function newPopup(url) {
+  popupWindow = window.open(
+    url,'popUpWindow','height=500,width=500,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes')
+}
+</script>
+      <p id="endLinks">
+        <a href="#" onClick="location.reload();">replay</a> 
+        <a href="JavaScript:newPopup('https://twitter.com/intent/tweet?url=http://kevingil.github.io/dpcr/coldwar/&text=Check+out+this+video+remix+by+@_kevingil');">tweet</a> 
+        <!--<a href="#">show cards</a>-->
+      </p>
+    </div>
 
-  <div id="end">
-    <img src="img/replay.png" onClick="location.reload();"></img><br><br>
-    <a href="https://twitter.com/share" class="twitter-share-button" data-related="jasoncosta" data-lang="en" data-size="large" data-count="none">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-  </div>
 
+</div>
+
+<div align="center" > <a href="#" id="startPops" style="font-size: 100px;">START</a></div>
     </body>
-  </html>
+</html>
