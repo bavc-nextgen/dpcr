@@ -75,9 +75,10 @@ var initPopcorn = function() {
 
 // video backgorund
 var hideAll = function(){
-	$('.e').hide('fast');
+	$('.e').hide('fast'); //
 	$('.container').hide('fast');
-	$('#end').fadeIn(2000);
+	$('#encv').hide('fast');
+	$('#end').fadeIn(3500);
 };
 
 var showEnd = function(){
